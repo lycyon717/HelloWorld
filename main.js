@@ -1,15 +1,13 @@
-var X = '* ';
-var Y = ' ';
-function strrep(num, num2, str, str2) {
-    var result = ' ';
-    for (var i = 0; i < num; i++) {
-        result += str;
+function strrep(num) {
+    for (var p = 0; p < num; p++) {
+        var result = "";
+        for (var i = 0; i < 10 - p; i++) {
+            result += " ";
+        }
+        for (var j = 0; j < p; j++) {
+            result += "* ";
+        }
+        console.log(result);
     }
-    for (var j = 0; j < num2; j++) {
-        result += str2;
-    }
-    return result;
 }
-for (var i = 0; i < 5; i++) {
-    console.log(strrep(10 - i, i, Y, X));
-}
+strrep(5);
